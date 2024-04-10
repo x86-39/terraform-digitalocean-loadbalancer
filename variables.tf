@@ -3,6 +3,12 @@ variable "name" {
   description = "The name of your DigitalOcean LoadBalancer."
 }
 
+variable "domain" {
+  type    = string
+  default = null
+  nullable = true
+}
+
 variable "region" {
   type        = string
   description = "The region in which you want to create your DigitalOcean LoadBalancer."

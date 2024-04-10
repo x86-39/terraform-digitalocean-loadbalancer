@@ -1,5 +1,5 @@
 resource "digitalocean_loadbalancer" "lb" {
-  name                  = var.name
+  name        = var.domain != null && var.domain != "" ? "${var.name}.${var.domain}" : var.name
   region                = var.region
   droplet_tag           = var.droplet_tag
   algorithm             = var.algorithm
